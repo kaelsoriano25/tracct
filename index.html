@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traact: Content Strategy Presentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* A slightly darker gray for better contrast */
+        }
+        .slide {
+            height: calc(100vh - 80px); /* Adjust for header/footer */
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 2rem;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #7a5195, #ef5675, #ff764a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .slide-content-box {
+            background-color: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 2.5rem;
+            max-width: 90%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-nav {
+            background-color: #003f5c;
+            color: white;
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-nav:hover:not(:disabled) {
+            background-color: #374c80;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .btn-nav:disabled {
+            background-color: #d1d5db;
+            color: #6b7280;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto">
+        <header class="py-4 px-8 text-center bg-[#003f5c] text-white rounded-b-3xl shadow-lg">
+            <h1 class="text-3xl font-bold">Traact Content Strategy</h1>
+            <h2 class="text-lg font-light opacity-80">A 6-Page LinkedIn Plan</h2>
+        </header>
+
+        <div id="slides-container" class="mt-8 mb-4">
+            <!-- Slide 1: Title Slide -->
+            <div id="slide-1" class="slide active">
+                <div class="slide-content-box text-center">
+                    <h2 class="text-5xl font-extrabold text-[#003f5c] mb-4">The LinkedIn Content Strategy</h2>
+                    <p class="text-2xl font-medium text-[#bc5090]">Positioning Traact as the Modern Legal CRM</p>
+                    <p class="text-lg text-gray-600 mt-8 max-w-2xl">This presentation outlines a detailed content strategy for both Adam Friedman's personal profile and the Traact company page, designed to establish market authority and drive qualified leads.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Core Strategy -->
+            <div id="slide-2" class="slide">
+                <div class="slide-content-box items-start">
+                    <h2 class="text-4xl font-bold text-[#003f5c] mb-8 text-center w-full">The Core Strategy & Pillars</h2>
+                    <div class="flex flex-col md:flex-row gap-8 w-full">
+                        <div class="flex-1 p-4 rounded-xl border-2 border-[#ff764a] transform transition-transform hover:scale-105">
+                            <h3 class="text-xl font-bold text-[#ff764a] mb-2">Core Messaging</h3>
+                            <p class="text-lg">**Your Legal CRM for Entity Management.** We will pivot from a generic "all-in-one" solution to a specific identity that resonates with legal and finance professionals.</p>
+                        </div>
+                        <div class="flex-1 space-y-4">
+                            <div class="p-4 rounded-xl border-2 border-[#ef5675] transform transition-transform hover:scale-105">
+                                <h3 class="text-xl font-bold text-[#ef5675] mb-2">1. Efficiency Pillar</h3>
+                                <p class="text-lg">Address cost-savings and budget optimization. Attract senior leaders with topics on reducing spend and streamlining workflows.</p>
+                            </div>
+                            <div class="p-4 rounded-xl border-2 border-[#bc5090] transform transition-transform hover:scale-105">
+                                <h3 class="text-xl font-bold text-[#bc5090] mb-2">2. Product Pillar</h3>
+                                <p class="text-lg">Visually showcase the modern design and core functionalities of the Traact platform through demos and "before & after" content.</p>
+                            </div>
+                            <div class="p-4 rounded-xl border-2 border-[#7a5195] transform transition-transform hover:scale-105">
+                                <h3 class="text-xl font-bold text-[#7a5195] mb-2">3. Human Pillar</h3>
+                                <p class="text-lg">Build trust and community by sharing client testimonials, team insights, and engaging directly with the audience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: The Synergy -->
+            <div id="slide-3" class="slide">
+                <div class="slide-content-box items-start">
+                    <h2 class="text-4xl font-bold text-[#003f5c] mb-8 text-center w-full">The Synergy: Adam's Profile & Company Page</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                        <div class="p-6 rounded-xl border-2 border-[#ff764a] transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-bold text-[#ff764a] mb-4">Adam's Personal Profile</h3>
+                            <p class="text-lg font-semibold text-gray-600">Role: Thought Leader & Human Face</p>
+                            <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
+                                <li>High-Level Commentary</li>
+                                <li>Behind-the-Scenes Insights</li>
+                                <li>Active Audience Engagement</li>
+                                <li>Amplify Company Content with Personal Endorsement</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 rounded-xl border-2 border-[#7a5195] transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-bold text-[#7a5195] mb-4">The Traact Company Page</h3>
+                            <p class="text-lg font-semibold text-gray-600">Role: Official Hub & Resource Center</p>
+                            <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
+                                <li>Product-Centric Content & Demos</li>
+                                <li>Educational Resources & Blog Posts</li>
+                                <li>Official Company News & Updates</li>
+                                <li>Industry Data & Infographics</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-lg text-center text-gray-500 mt-8">The workflow ensures seamless cross-promotion, giving every piece of content maximum reach and authenticity.</p>
+                </div>
+            </div>
+
+            <!-- Slide 4: Templates -->
+            <div id="slide-4" class="slide">
+                <div class="slide-content-box items-start">
+                    <h2 class="text-4xl font-bold text-[#003f5c] mb-8 text-center w-full">Content Templates</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                        <div class="p-6 rounded-xl border-2 border-[#ef5675] transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-bold text-[#ef5675] mb-4">Case Study Post</h3>
+                            <p class="text-lg font-semibold text-gray-600">Tell a concise story with a clear problem and quantified solution.</p>
+                            <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
+                                <li>Start with a bold stat (e.g., "Saved 200+ Hours").</li>
+                                <li>Describe the manual process and pain points.</li>
+                                <li>List 3 clear benefits from using Traact.</li>
+                                <li>Link to the full case study on the website.</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 rounded-xl border-2 border-[#ff764a] transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-bold text-[#ff764a] mb-4">Client Testimonial Post</h3>
+                            <p class="text-lg font-semibold text-gray-600">Leverage social proof with a direct, personal quote.</p>
+                            <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
+                                <li>Use a professional headshot or company logo.</li>
+                                <li>Begin with a rewarding statement.</li>
+                                <li>Feature a direct quote from the client.</li>
+                                <li>Link to the team or about page to humanize the brand.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Blog Post Topics -->
+            <div id="slide-5" class="slide">
+                <div class="slide-content-box items-start">
+                    <h2 class="text-4xl font-bold text-[#003f5c] mb-8 text-center w-full">Blog Post Topics</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+                        <div class="p-4 rounded-xl border-2 border-[#ff764a] transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-bold text-[#ff764a] mb-2">Efficiency</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>Hidden Costs of Spreadsheets</li>
+                                <li>ROI Guide for Legal Teams</li>
+                                <li>Why "Unlimited Users" Matters</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 rounded-xl border-2 border-[#bc5090] transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-bold text-[#bc5090] mb-2">Product</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>A Day in the Life of a Paralegal</li>
+                                <li>The Importance of a Dashboard</li>
+                                <li>The Future of Legal Tech is All-in-One</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 rounded-xl border-2 border-[#7a5195] transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-bold text-[#7a5195] mb-2">Human Element</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <li>From Spreadsheets to Strategy</li>
+                                <li>How to Build a Culture of Compliance</li>
+                                <li>Interview with Adam Friedman</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Action Plan -->
+            <div id="slide-6" class="slide">
+                <div class="slide-content-box items-start">
+                    <h2 class="text-4xl font-bold text-[#003f5c] mb-8 text-center w-full">90-Day Action Plan</h2>
+                    <div class="w-full space-y-6">
+                        <div class="p-6 rounded-xl border-2 border-[#ef5675] transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-bold text-[#ef5675] mb-2">Month 1: Foundation & Messaging</h3>
+                            <p class="text-lg text-gray-700">Establish the "Legal CRM" messaging on both profiles. Post initial infographics and a testimonial. Begin active engagement with the target audience.</p>
+                        </div>
+                        <div class="p-6 rounded-xl border-2 border-[#ff764a] transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-bold text-[#ff764a] mb-2">Month 2: Content & Curation</h3>
+                            <p class="text-lg text-gray-700">Increase posting frequency and create a content library. Publish new infographics, short videos, and a full client interview.</p>
+                        </div>
+                        <div class="p-6 rounded-xl border-2 border-[#7a5195] transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-bold text-[#7a5195] mb-2">Month 3: Amplification & Refinement</h3>
+                            <p class="text-lg text-gray-700">Analyze what content is performing best and amplify it. Use data to refine the strategy and promote top posts with advertising.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="flex justify-center items-center py-4 space-x-4">
+            <button id="prevBtn" class="btn-nav">
+                Previous
+            </button>
+            <span id="pageIndicator" class="text-xl font-bold text-[#003f5c]">1 of 6</span>
+            <button id="nextBtn" class="btn-nav">
+                Next
+            </button>
+        </footer>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const pageIndicator = document.getElementById('pageIndicator');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[n].classList.add('active');
+            pageIndicator.textContent = `${n + 1} of ${totalSlides}`;
+            prevBtn.disabled = n === 0;
+            nextBtn.disabled = n === totalSlides - 1;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        window.onload = () => {
+            showSlide(currentSlide);
+        };
+    </script>
+</body>
+</html>
